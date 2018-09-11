@@ -1,12 +1,48 @@
-//COERCION
+// Conditionals
 
-// "+" IS THE CONCATENATION OPERATOR AND GIVES THE PRIORITY TO THE STRING DATA TYPE
-var string = "42";
-var number = 2;
+// if
 
-console.log(string + number);
+var a = 2; // Number
+var b = "2"; // String
 
-// "*" IS THE MULTIPLICATION OPERATOR AND GIVES THE PRIORITY TO THE NUMBER DATA TYPE
 
-console.log(string * number);
-console.log("in case you are wondering the data type of the output: its a " + typeof(string*number));
+if (a == 2) {
+    console.log("equal1");
+} else if (a == 3) {
+    console.log("a is not 3");
+} else {
+    console.log("not-equal1")
+}
+
+
+
+if (a === 2) {
+    console.log("equal2");
+} else {
+    console.log("not-equal2")
+}
+
+
+
+if (b == 2) {
+    console.log("equal3");
+} else {
+    console.log("not-equal3")
+}
+
+
+
+if (b === 2) {
+    console.log("equal4");
+} else {
+    console.log("not-equal4")
+}
+
+
+
+
+if (a == 2 || a === 2) {
+    console.log("equal5");
+} else {
+    console.log("not-equal5")
+}
