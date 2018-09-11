@@ -1,7 +1,7 @@
-//Conditionals
-// Ternary - Statements
-var b = true;
-var a = ( b  ? "4" : "5" );
+// Arrays
 
-console.log("b:", b);
-console.log("a:", a);
+var a = []; // initailizes an empty array .
+var b = ['John', 2, true]; // can store array values of any type. 
+
+console.log(b); // Shows array as output
+console.log(b[0], b[1] ,b[2]); //John,2,true
