@@ -1,42 +1,39 @@
-// array-2 : Methods
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// strings
+var str = "Hello World!" ;
 
-// Join
-var fruitsJoin = fruits.join(":");
+// it can be treated as an array of characters (though it is not).
+// so str[1] will be 'H' and str[5] is ' ' .
 
-console.log("fruitsJoin",fruitsJoin);
- 
+// property: length
 
-// pop 
+var length = str.length; // 11
 
-var lastElement = fruits.pop(); // doesn't take any parameter , removes last element.
+console.log(length);
 
-console.log("lastElement", lastElement); // returns last element
+str = " This is JavaScript Tutorial"; // overwrite already present str. 
 
-console.log("fruits", fruits); // removes last element from main array
+// indexOf Method
+// gives the position of the first letter of the word when it is matched. 
+var pos = str.indexOf("JavaScript",0); // Here 2nd param (0) is starting position of the search, if nothing is given it is treated as 0.
+console.log(pos);
+
+//lastIndexOf Method
+// gives the position of the last leter of the word when it is matched.
+var lastPos = str.lastIndexOf("JavaScript", 0); // Here 2nd param (0) is starting position of the search, if nothing is given it is treated as 0.
+console.log(lastPos);
 
 
-// shift 
-// similar to pop but works on first element instead of last element
+// Extracting String Parts
+    //1. slice method 
+    //2. substr method
+    //3. replace
+var slicedString = str.slice(1,9); // first parameter is compulsory, if 2nd param is not given , it will search the whole string.
+console.log("slicedString", slicedString);        // if negative param is given it will search from the last. (Try and play with it!)
+
+var substrString = str.substr(7, 6); // similar to slice but second param is the length of the string. (First remaining the the position)
+console.log("subString", substrString);
+
+var replacedString = str.replace('This', 'That'); // returns a new string. 
+console.log("replacedString", replacedString);
 
 
-//push
-// pushes an element to the last of the array
-var x = fruits.push("Kiwi");   //  the value of x is 5 
-
-//splice *important*
-
-fruits.splice(
-    2, // position where you want to ad 
-    0, // how many elements to be removed
-    "lemon", // what to be added
-    "Pineapple"
-)
-
-console.log(fruits);
-
-// concat *important*
-//concats (joins) two arrays.
-var vegetables = ["Potato", "Tomato", "Onion"];
-var eatables = fruits.concat(vegetables);
-console.log("eatables are", eatables);
