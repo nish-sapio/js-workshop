@@ -1,28 +1,36 @@
-//Scoping
+// Callbacks
+// Basically a function takes a function as a parameter it is called callback!
 
-var a = 25;
-
-(function stage1(a){
-	console.log("The value of a in stage 1 : " + a); 
-})(10);
-
-(function stage2(){
-	var a = 20;
-	console.log("The value of a in stage 2: " + a);
-})();
-
-console.log("The value of a declared globally is:" + a);
-
-if(1){
-	let a = 50;
-	console.log("The value of a in if block with let: " + a);
+function greeting(name) {
+    alert('Hello ' + name);
+  }
+  
+function processUserInput(callback) {
+var name = prompt('Please enter your name.');
+callback(name);
 }
+  
+processUserInput(greeting);
 
-console.log("The value of a declared globally is:" + a);
 
-if(1){
-	a = 40;
-	console.log("The value of a in if block without let: " + a);
-}
+// Another Example 
 
-console.log( "The value of a declared globally is after if statements:" + a);
+function doHomework(subject, callback) {
+    alert('Starting my'+ subject +'homework.');
+    callback();
+  }
+  
+  doHomework('math', function() {
+    alert('Finished my homework');
+  });
+
+
+// advanced example just to show you what callbacks can do .(Don't expect yourself to understand this)
+//   var T;
+//   T.get('search/tweets', params, function(err, data, response) {
+//     if(!err){
+//       // This is where the magic will happen
+//     } else {
+//       console.log(err);
+//     }
+//   })
