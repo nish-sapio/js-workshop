@@ -41,4 +41,3 @@ greetNames2(names);
     console.log('My name is ', name);
 })('Javascript');
 
-

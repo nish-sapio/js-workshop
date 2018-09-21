@@ -1,4 +1,6 @@
 //Scoping
+// var is used for function scoping and let is used for block scoping. 
+//There is a difference between those two.
 
 var a = 25;
 
@@ -24,5 +26,10 @@ if(1){
 	a = 40;
 	console.log("The value of a in if block without let: " + a);
 }
+if(1) {
+	var a = 45;
+	console.log("The value of a in if block with var:"+a);
+}
+// keep in mind that in a scope(function or block) declaring an already decalred scope is like overwriting the previous one.
 
-console.log( "The value of a declared globally is after if statements:" + a);
+console.log( "The value of a declared globally is after if statements:" + a); 
